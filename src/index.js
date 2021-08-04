@@ -1,4 +1,4 @@
-import projectModule from "./projectModule";
+import projectModule from "./Application/projectModule";
 
 // on-load
 window.projectModule = projectModule;
