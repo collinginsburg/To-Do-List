@@ -1,5 +1,6 @@
 // task factory function
-const taskFactory = (title, description, dueDate, priority, creationDate, completed = false) => {
+const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate, priority, customOrder, completed = false) => {
+    const getGUID = () => GUID;
     const getCreationDate = () => creationDate;
     const completionStatus = () => completed;
     const toggleCompletion = function(){
@@ -11,7 +12,17 @@ const taskFactory = (title, description, dueDate, priority, creationDate, comple
             console.log(completed);
         }
     }
-    return{title, description, dueDate, getCreationDate, priority, completionStatus, toggleCompletion}
+    return{
+        getGUID, 
+        title,
+        listTitle, 
+        description, 
+        dueDate, 
+        getCreationDate, 
+        priority,
+        customOrder, 
+        completionStatus, 
+        toggleCompletion}
 }
 
 

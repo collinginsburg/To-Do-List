@@ -1,11 +1,13 @@
 import listFactory from './list';
 import { format } from 'date-fns';
+import uuidv4 from './guidGenerator';
 
 const projectModule = (() => {
     const listsArray = [];
-    function createList(title, creationDate){
+    function createList(title, GUID, creationDate){
+        GUID = uuidv4();
         creationDate = format(new Date(), 'Pp');
-        let newList = listFactory(title, creationDate);
+        let newList = listFactory(title, GUID, creationDate);
         listsArray.push(newList); 
     };
 return{
