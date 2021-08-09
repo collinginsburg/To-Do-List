@@ -6,13 +6,16 @@ import sortAlphabeticallyZA from "./tasklist-sort/sortAlphabeticallyZA";
 import sortByCreationDateOldNew from "./tasklist-sort/sortByCreationDateOldNew";
 import sortByCreationDateNewOld from "./tasklist-sort/sortByCreationDateNewOld";
 import sortByPriorityLoHi from "./tasklist-sort/sortByPriorityLoHi";
-import sortByPriorityHiLo from "./tasklist-sort/sortByPriorityHiLo"
+import sortByPriorityHiLo from "./tasklist-sort/sortByPriorityHiLo";
+import sortByCompletionStatusFT from "./tasklist-sort/sortByCompletionStatusFT";
+import sortByCompletionStatusTF from "./tasklist-sort/sortByCompletionStatusTF";
 
 
 
 
 // list factory function
 const listFactory = (title, GUID, creationDate) => {
+
     const getGUID = () => GUID;
     const getCreationDate = () => creationDate;
     const taskList = [];
@@ -22,6 +25,9 @@ const listFactory = (title, GUID, creationDate) => {
     const sortDateNewOld = sortByCreationDateNewOld;
     const sortPriorityLoHi = sortByPriorityLoHi;
     const sortPriorityHiLo = sortByPriorityHiLo;
+    const sortCompletionFT = sortByCompletionStatusFT;
+    const sortCompletionTF = sortByCompletionStatusTF;
+
     function createTask(title, description, dueDate, priority) {
         const GUID = uuidv4();
         const creationDate = new Date();
@@ -41,7 +47,10 @@ const listFactory = (title, GUID, creationDate) => {
         sortDateOldNew, 
         sortDateNewOld, 
         sortPriorityLoHi,
-        sortPriorityHiLo
+        sortPriorityHiLo,
+        sortCompletionFT,
+        sortCompletionTF
+
     }
 }
 

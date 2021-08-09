@@ -22,7 +22,8 @@ const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate,
         priority,
         customOrder, 
         completionStatus, 
-        toggleCompletion}
+        toggleCompletion
+    }
 }
 
 
