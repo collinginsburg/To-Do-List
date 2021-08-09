@@ -1,4 +1,4 @@
-function sortAlphabetically(){
+function sortAlphabeticallyAZ(){
     this.taskList.sort(function(a,b){
         if (a.title > b.title){
             return 1;
@@ -7,13 +7,12 @@ function sortAlphabetically(){
         }
         return 0;
     })
-
-    
 }
 
 
 
 
 
+
 // export
-export default sortAlphabetically;
+export default sortAlphabeticallyAZ;

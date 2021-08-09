@@ -6,7 +6,7 @@ const projectModule = (() => {
     const listsArray = [];
     function createList(title, GUID, creationDate){
         GUID = uuidv4();
-        creationDate = format(new Date(), 'Pp');
+        creationDate = new Date();
         let newList = listFactory(title, GUID, creationDate);
         listsArray.push(newList); 
     };
