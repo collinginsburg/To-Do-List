@@ -1,5 +1,5 @@
 // task factory function
-const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate, priority, customOrder, completed = false) => {
+const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate, priority, customOrder, completed = false, selected = false) => {
     const getGUID = () => GUID;
     const getCreationDate = () => creationDate;
     const completionStatus = () => completed;
@@ -12,6 +12,16 @@ const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate,
             console.log(completed);
         }
     }
+    const selectedStatus = () => selected;
+    const toggleSelected = function(){
+        if (selected === false){
+            selected = true;
+            console.log(selected);
+        } else{
+            selected = false;
+            console.log(selected);
+        }
+    }
     return{
         getGUID, 
         title,
@@ -22,7 +32,9 @@ const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate,
         priority,
         customOrder, 
         completionStatus, 
-        toggleCompletion
+        toggleCompletion,
+        selectedStatus,
+        toggleSelected
     }
 }
 
