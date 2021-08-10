@@ -1,5 +1,5 @@
 function sortAlphabeticallyZA(){
-    this.taskList.sort(function(a,b){
+    this.listsArray.sort(function(a,b){
         if (b.title.toUpperCase() > a.title.toUpperCase()){
             return 1;
         } else if (b.title.toUpperCase() < a.title.toUpperCase()){
@@ -8,6 +8,11 @@ function sortAlphabeticallyZA(){
         return 0;
     })
 }
+
+
+
+
+
 
 // export
 export default sortAlphabeticallyZA;
