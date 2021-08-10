@@ -5,6 +5,8 @@ import sortAlphabeticallyAZ from "./tasklist-fns/sortAlphabeticallyAZ";
 import sortAlphabeticallyZA from "./tasklist-fns/sortAlphabeticallyZA";
 import sortByCreationDateOldNew from "./tasklist-fns/sortByCreationDateOldNew";
 import sortByCreationDateNewOld from "./tasklist-fns/sortByCreationDateNewOld";
+import sortByDueDateOldNew from "./tasklist-fns/sortByDueDateOldNew";
+import sortByDueDateNewOld from "./tasklist-fns/sortByDueDateNewOld";
 import sortByPriorityLoHi from "./tasklist-fns/sortByPriorityLoHi";
 import sortByPriorityHiLo from "./tasklist-fns/sortByPriorityHiLo";
 import sortByCompletionStatusFT from "./tasklist-fns/sortByCompletionStatusFT";
@@ -25,6 +27,8 @@ const listFactory = (title, GUID, creationDate) => {
     const sortAlphaZA = sortAlphabeticallyZA;
     const sortDateOldNew = sortByCreationDateOldNew;
     const sortDateNewOld = sortByCreationDateNewOld;
+    const sortDueDateOldNew = sortByDueDateOldNew;
+    const sortDueDateNewOld = sortByDueDateNewOld;
     const sortPriorityLoHi = sortByPriorityLoHi;
     const sortPriorityHiLo = sortByPriorityHiLo;
     const sortCompletionFT = sortByCompletionStatusFT;
@@ -49,7 +53,9 @@ const listFactory = (title, GUID, creationDate) => {
         sortAlphaAZ, 
         sortAlphaZA, 
         sortDateOldNew, 
-        sortDateNewOld, 
+        sortDateNewOld,
+        sortDueDateOldNew,
+        sortDueDateNewOld,
         sortPriorityLoHi,
         sortPriorityHiLo,
         sortCompletionFT,
