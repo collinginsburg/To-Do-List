@@ -1,15 +1,15 @@
 import taskFactory from "./task";
 import { format } from 'date-fns';
 import uuidv4 from './guidGenerator'
-import sortAlphabeticallyAZ from "./tasklist-sort/sortAlphabeticallyAZ";
-import sortAlphabeticallyZA from "./tasklist-sort/sortAlphabeticallyZA";
-import sortByCreationDateOldNew from "./tasklist-sort/sortByCreationDateOldNew";
-import sortByCreationDateNewOld from "./tasklist-sort/sortByCreationDateNewOld";
-import sortByPriorityLoHi from "./tasklist-sort/sortByPriorityLoHi";
-import sortByPriorityHiLo from "./tasklist-sort/sortByPriorityHiLo";
-import sortByCompletionStatusFT from "./tasklist-sort/sortByCompletionStatusFT";
-import sortByCompletionStatusTF from "./tasklist-sort/sortByCompletionStatusTF";
-import sortByCustomOrder from "./tasklist-sort/sortByCustomOrder";
+import sortAlphabeticallyAZ from "./tasklist-fns/sortAlphabeticallyAZ";
+import sortAlphabeticallyZA from "./tasklist-fns/sortAlphabeticallyZA";
+import sortByCreationDateOldNew from "./tasklist-fns/sortByCreationDateOldNew";
+import sortByCreationDateNewOld from "./tasklist-fns/sortByCreationDateNewOld";
+import sortByPriorityLoHi from "./tasklist-fns/sortByPriorityLoHi";
+import sortByPriorityHiLo from "./tasklist-fns/sortByPriorityHiLo";
+import sortByCompletionStatusFT from "./tasklist-fns/sortByCompletionStatusFT";
+import sortByCompletionStatusTF from "./tasklist-fns/sortByCompletionStatusTF";
+import sortByCustomOrder from "./tasklist-fns/sortByCustomOrder";
 
 
 

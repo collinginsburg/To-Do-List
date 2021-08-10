@@ -4,4 +4,4 @@ function sortByCustomOrder(taskList, from, customOrder){
 }
 
 // export
-export default sortByCustomOrder
+export default sortByCustomOrder;
