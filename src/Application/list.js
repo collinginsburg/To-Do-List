@@ -13,6 +13,7 @@ import sortByCompletionStatusFT from "./tasklist-fns/sortByCompletionStatusFT";
 import sortByCompletionStatusTF from "./tasklist-fns/sortByCompletionStatusTF";
 import sortByCustomOrder from "./tasklist-fns/sortByCustomOrder";
 import deleteSelectedTasks from "./tasklist-fns/deleteSelectedTasks";
+import moveTaskToNewProject from "./tasklist-fns/moveTaskToNewProject";
 
 
 
@@ -35,6 +36,7 @@ const listFactory = (title, GUID, creationDate) => {
     const sortCompletionTF = sortByCompletionStatusTF;
     const sortCustomOrder = sortByCustomOrder;
     const deleteTasks = deleteSelectedTasks;
+    const moveTasks = moveTaskToNewProject;
 
     function createTask(title, description, dueDate, priority) {
         const GUID = uuidv4();
@@ -61,7 +63,8 @@ const listFactory = (title, GUID, creationDate) => {
         sortCompletionFT,
         sortCompletionTF,
         sortCustomOrder,
-        deleteTasks
+        deleteTasks,
+        moveTasks
 
     }
 }
