@@ -57,3 +57,21 @@ body{
 
 }
 
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* content div, overall grid layout */
+#content{
+    display:grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 2fr 4.5fr 1.5fr;
+    grid-template-rows: 1.5fr 1.5fr 7fr 2fr;
+    grid-template-areas: 
+    ". . ."
+    ". displayedProject ."
+    "projectsList taskListCont ."
+    ". . ."
+    ;
+}
