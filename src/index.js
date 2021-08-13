@@ -1,11 +1,17 @@
 import projectModule from "./Application/projectModule";
 import './styles.css';
+import main from "./UI/ui-main";
+import nav from "./UI/ui-nav"
 
 
 // content div, and its children
 let content = document.createElement('div'); 
 content.setAttribute('id','content');
 document.body.appendChild(content);
+
+// append to content
+content.appendChild(main);
+content.appendChild(nav);
 
 
 
