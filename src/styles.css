@@ -73,7 +73,7 @@ body{
     height: 100%;
     width: 100%;
     grid-template-columns: 1fr 450px 900px 200px 1fr;
-    grid-template-rows: 1fr 100px 550px 2fr;
+    grid-template-rows: 1fr 100px 700px 2fr;
     grid-template-areas: 
     ". . . . ."
     ". . mainApp . ."
@@ -93,12 +93,23 @@ body{
     width: 100%;
 }
 .taskListContainer{
+    display: grid;
+    grid-template-rows: 15% 70% 1fr;
     height: 82%;
     width: 100%;
     background: #DFDFDF;
     mix-blend-mode: overlay;
     border: 2px solid #000000;
     border-radius: 49px;
+}
+
+.taskList{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    /* grid-template-rows: 70px 70px 70px; */
+    grid-auto-rows: 80px;
+    overflow-y: scroll;
 }
 
 /* nav area */
