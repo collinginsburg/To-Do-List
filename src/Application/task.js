@@ -2,14 +2,13 @@
 const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate, priority, customOrder, completed = false, selected = false) => {
     const getGUID = () => GUID;
     const getCreationDate = () => creationDate;
-    const completionStatus = () => completed;
     const toggleCompletion = function(){
-        if (completed === false){
-            completed = true;
-            console.log(completed);
+        if (this.completed === false){
+            this.completed = true;
+            console.log(this.completed);
         } else{
-            completed = false;
-            console.log(completed);
+            this.completed = false;
+            console.log(this.completed);
         }
     }
     const selectedStatus = () => selected;
@@ -31,7 +30,7 @@ const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate,
         getCreationDate, 
         priority,
         customOrder, 
-        completionStatus, 
+        completed, 
         toggleCompletion,
         selectedStatus,
         toggleSelected

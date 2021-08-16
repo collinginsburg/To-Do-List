@@ -1,20 +1,13 @@
 import listFactory from './list';
 import { format } from 'date-fns';
 import uuidv4 from './guidGenerator';
-import sortByCreationDateNewOld from './list-fns/sortByCreationDateNewOld';
-import sortByCreationDateOldNew from './list-fns/sortByCreationDateOldNew';
-import sortAlphabeticallyAZ from './list-fns/sortAlphabeticallyAZ';
-import sortAlphabeticallyZA from './list-fns/sortAlphabeticallyZA';
 import deleteListFromModule from './list-fns/deleteListFromModule.js';
+import sortArrayBy from './sortArrayBy';
 
 const projectModule = (() => {
     const listsArray = [];
-
-    const sortDateNewOld = sortByCreationDateNewOld;
-    const sortDateOldNew = sortByCreationDateOldNew;
-    const sortAlphaAZ = sortAlphabeticallyAZ;
-    const sortAlphaZA = sortAlphabeticallyZA;
     const deleteList = deleteListFromModule; 
+    const sortBy = sortArrayBy;
 
     function createList(title, GUID, creationDate){
         GUID = uuidv4();
@@ -24,12 +17,9 @@ const projectModule = (() => {
     };
 return{
     listsArray,
-    sortDateNewOld,
-    sortDateOldNew,
-    sortAlphaAZ,
-    sortAlphaZA,
     createList,
-    deleteList
+    deleteList,
+    sortBy
 };
 
 })();
