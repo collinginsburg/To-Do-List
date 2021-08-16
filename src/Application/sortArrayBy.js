@@ -35,23 +35,6 @@ function sortArrayBy(array, property, isAscending){
     }
 
 }
-// array name
-// property name
-// isAscending: t/f
-
-// if ascending === true
-    // if typeof this.taskList[0].property === number
-    // if typeof === string
-    // if typeof === boolean
-    // if x instanceof Date
-// else
-    // if typeof === number
-    // if typeof === string
-    // if typeof === boolean
-    // if x instanceof Date
-
-
-
 
 //*********************NOTES******** 
 // new = low, old = high so ascending is true new-old sort ordering
