@@ -1,7 +1,9 @@
 import projectModule from "./Application/projectModule";
 import './styles.css';
+import displayedProject from "./UI/ui-displayedProject";
 import main from "./UI/ui-main";
 import nav from "./UI/ui-nav"
+
 
 
 // content div, and its children
@@ -10,6 +12,7 @@ content.setAttribute('id','content');
 document.body.appendChild(content);
 
 // append to content
+content.appendChild(displayedProject);
 content.appendChild(main);
 content.appendChild(nav);
 
