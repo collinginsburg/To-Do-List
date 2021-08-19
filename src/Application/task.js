@@ -2,6 +2,7 @@
 const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate, priority, customOrder, completed = false, selected = false) => {
     const getGUID = () => GUID;
     const getCreationDate = () => creationDate;
+    const getDueDate = () => dueDate;
     const toggleCompletion = function(){
         if (this.completed === false){
             this.completed = true;
@@ -27,7 +28,8 @@ const taskFactory = (GUID, creationDate, title, listTitle, description, dueDate,
         listTitle, 
         description, 
         dueDate, 
-        getCreationDate, 
+        getCreationDate,
+        getDueDate, 
         priority,
         customOrder, 
         completed, 
