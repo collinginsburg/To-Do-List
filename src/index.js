@@ -39,27 +39,17 @@ project.listsArray[0].createTask("take out the trash", "its thursday", new Date(
 project.listsArray[0].createTask("flip the pickles", "they leaking!", new Date(2021, 7, 30), 2);
 project.listsArray[0].createTask("walk the dog", "or else he'll poop in the house",  new Date(2021, 7, 19), 1);
 
-// project.listsArray[0].createTask("take out the trash", "its thursday", new Date(2021, 7, 31), 3);
-// project.listsArray[0].createTask("flip the pickles", "they leaking!", new Date(2021, 7, 30), 2);
-// project.listsArray[0].createTask("walk the dog", "or else he'll poop in the house",  new Date(2021, 7, 19), 1);
+project.createList("Groceries");// second list
 
-// project.listsArray[0].createTask("take out the trash", "its thursday", new Date(2021, 7, 31), 3);
-// project.listsArray[0].createTask("flip the pickles", "they leaking!", new Date(2021, 7, 30), 2);
-// project.listsArray[0].createTask("walk the dog", "or else he'll poop in the house",  new Date(2021, 7, 19), 1);
 
-// project.listsArray[0].createTask("take out the trash", "its thursday", new Date(2021, 7, 31), 3);
-// project.listsArray[0].createTask("flip the pickles", "they leaking!", new Date(2021, 7, 30), 2);
-// project.listsArray[0].createTask("walk the dog", "or else he'll poop in the house",  new Date(2021, 7, 19), 1);
-
-//set regulator module to selected project
-let defaultListGUID = project.listsArray[0].getGUID();
-uiRegulator.currentDisplayGUID = defaultListGUID;
+let defaultListGUID = project.listsArray[0].getGUID(); //capture guid of selected proj
+uiRegulator.currentDisplayGUID = defaultListGUID;//set regulator module to selected project,aka click one
 
 window.displayTasks = displayTasks;
+// window.displayProjects = displayProjects;
 displayTasks();
-// console.log(uiRegulator.currentDisplayGUID);
+// displayProjects();
 
-// console.log(project);
 
 
 
