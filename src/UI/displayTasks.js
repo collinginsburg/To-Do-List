@@ -45,6 +45,16 @@ function displayTasks(){
         task.appendChild(taskDueDate);
         
         let taskPriority = document.createElement('p');
+        let numPriority = projectModule.listsArray[index].taskList[i].priority;
+        let textPriority;
+        if (numPriority === 3){
+            textPriority = "HI"
+        } else if (numPriority === 2){
+            textPriority = "MED";
+        } else if (numPriority === 1){
+            textPriority = "LO"
+        }
+        taskPriority.textContent = textPriority;
         taskPriority.classList.add('taskListItem__priority');
         task.appendChild(taskPriority);
 
