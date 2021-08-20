@@ -1,5 +1,4 @@
 import projectModule from "../Application/projectModule";
-import main from "./ui-main";
 import uiRegulator from "./ui-regulator";
 import { format } from 'date-fns'
 

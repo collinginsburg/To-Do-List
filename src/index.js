@@ -6,6 +6,7 @@ import nav from "./UI/ui-nav";
 
 import uiRegulator from "./UI/ui-regulator";
 import displayTasks from "./UI/displayTasks";
+import displayProjects from "./UI/displayProjects";
 
 
 
@@ -40,15 +41,15 @@ project.listsArray[0].createTask("flip the pickles", "they leaking!", new Date(2
 project.listsArray[0].createTask("walk the dog", "or else he'll poop in the house",  new Date(2021, 7, 19), 1);
 
 project.createList("Groceries");// second list
-
+project.createList("Trip");// 3rd list
 
 let defaultListGUID = project.listsArray[0].getGUID(); //capture guid of selected proj
 uiRegulator.currentDisplayGUID = defaultListGUID;//set regulator module to selected project,aka click one
 
 window.displayTasks = displayTasks;
-// window.displayProjects = displayProjects;
+window.displayProjects = displayProjects;
 displayTasks();
-// displayProjects();
+displayProjects();
 
 
 

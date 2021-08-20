@@ -129,7 +129,7 @@ body{
     height: 100%;
     width: 100%;
     font-size: 1.4em;
-    grid-auto-rows: 4.5rem;
+    grid-auto-rows: 6rem;
     overflow-y: scroll;
 }
 
@@ -167,4 +167,14 @@ body{
     grid-area: nav;
     display: grid;
     grid-template-rows: auto minmax(17%,1fr);
+}
+.projects{
+    grid-auto-rows: 4.5rem;
+    font-family: 'Alfa Slab One', serif;
+    color: #D4D4D4;
+    font-size: 2.4em;
+    padding-left: 4em;
+}
+.projectsItem{
+    padding: .4em;
 }
