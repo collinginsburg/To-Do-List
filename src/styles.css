@@ -105,7 +105,24 @@ body{
 .displayedProject{
     grid-area: displayedProject;
     display: grid;
-    grid-template-columns: 9fr 1fr;
+    grid-template-columns: 72% 28%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    align-content: flex-end;
+}
+.displayedProject__title{
+    font-family: "Alfa Slab One";
+    font-size: 5em;
+    width: 90%;
+    color: white;
+}
+.displayedProject__date{
+    font-family: "Varta";
+    align-self: flex-end;
+    font-weight: 700;
+    font-size: 1.4em;
+    color: white;
 }
 
 /* main tasklist */
