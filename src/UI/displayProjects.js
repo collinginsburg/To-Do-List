@@ -10,15 +10,7 @@ function clearProjects(){
     }
 }
 
-function highlightSelected(){
-    let selectedGUID = uiRegulator.currentDisplayGUID;
-    console.log(selectedGUID);
-    let selectedEl = document.querySelector(`li[data-index ='${selectedGUID}']`);
-    selectedEl.style.color = 'white';
-}
-
-function displayProjects(){
-    clearProjects();
+function createDOMelements(){
     let projectsList = document.querySelector('.projects');
     for (let i = 0; i < projectModule.listsArray.length; i++){
         let project = document.createElement('li');
@@ -28,6 +20,18 @@ function displayProjects(){
 
         projectsList.appendChild(project);
     }
+}
+
+function highlightSelected(){
+    let selectedGUID = uiRegulator.currentDisplayGUID;
+    console.log(selectedGUID);
+    let selectedEl = document.querySelector(`li[data-index ='${selectedGUID}']`);
+    selectedEl.style.color = 'white';
+}
+
+function displayProjects(){
+    clearProjects();
+    createDOMelements();
     highlightSelected();
 }
 
