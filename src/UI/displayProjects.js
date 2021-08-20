@@ -22,6 +22,18 @@ function createDOMelements(){
     }
 }
 
+function setSelectedTitleDate(){
+    let index = projectModule.listsArray.findIndex(list => list.getGUID() === uiRegulator.currentDisplayGUID);
+    let projectTitle = projectModule.listsArray[index].title;
+
+    let projectDateFormatted = format(projectModule.listsArray[index].getCreationDate(), 'Pp');
+
+    let titleElement = document.querySelector('.displayedProject__title');
+    let dateElement = document.querySelector('.displayedProject__date'); 
+    titleElement.textContent = projectTitle;
+    dateElement.textContent = "Created: " + projectDateFormatted;
+}
+
 function highlightSelected(){
     let selectedGUID = uiRegulator.currentDisplayGUID;
     console.log(selectedGUID);
@@ -32,6 +44,7 @@ function highlightSelected(){
 function displayProjects(){
     clearProjects();
     createDOMelements();
+    setSelectedTitleDate();
     highlightSelected();
 }
 
