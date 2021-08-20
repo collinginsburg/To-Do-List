@@ -1,5 +1,6 @@
 import projectModule from "../Application/projectModule";
 import uiRegulator from "./ui-regulator";
+import chooseProject from "./chooseProject";
 import { format } from 'date-fns'
 
 function clearProjects(){
@@ -17,7 +18,7 @@ function createDOMelements(){
         project.setAttribute('data-index', projectModule.listsArray[i].getGUID());
         project.classList.add('projectsItem');
         project.textContent = projectModule.listsArray[i].title;
-
+        project.addEventListener('click', chooseProject);
         projectsList.appendChild(project);
     }
 }
