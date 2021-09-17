@@ -117,6 +117,7 @@ body{
     width: 90%;
     color: white;
     overflow-x: hidden;
+    text-overflow: ellipsis;
     overflow-y: hidden;
 }
 .displayedProject__date{
@@ -161,21 +162,29 @@ body{
 .taskListColTitles{
     padding-right: 12px;
     color: #6d6d6d;
-    /* overflow-y: scroll; */
+}
+.taskListColTitles__priority{
+    text-align: center;
 }
 .taskListItem{
     border-bottom: 1px #afafaf solid;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .taskListItem__desc{
     font-weight: 300;
     width: 80%;
     /* height: 80%; */
     /* padding:20px; */
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .taskListItem__DueDate{
     font-size: .8em;
+}
+.taskListItem__priority{
+    text-align: center;
 }
 /* nav */
 .projNav{
@@ -190,12 +199,15 @@ body{
     color: #D4D4D4;
     font-size: 2.4em;
     overflow-x: hidden;
+    text-overflow: ellipsis;
 
 }
 .projectsItem{
     padding-top: .4em;
     padding-bottom: .4em;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
 }
 .projectsItem:hover,.projectsItem:focus{
