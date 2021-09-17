@@ -73,6 +73,7 @@ body::-webkit-scrollbar-track-piece
 
 /* colors */
 :root{
+    --gray: #252525;
 
 }
 html{
@@ -146,7 +147,7 @@ body{
 }
 .taskList{
     display: grid;
-    color: #252525;
+    color: var(--gray);
     height: 100%;
     width: 100%;
     font-size: 1.4em;
@@ -185,6 +186,34 @@ body{
 }
 .taskListItem__priority{
     text-align: center;
+}
+
+/* add task button */
+.addTask{
+    /* height: auto; */
+    /* border: 1px solid black; */
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.addTask:hover{
+    background: white;
+    border-radius: 10px;
+}
+.addTask__btn{
+    border: none;
+    background: none;
+    padding: 0;
+    padding-right: 10px;
+    height: 100%;
+}
+.addTask__txt{
+    font-family: 'Varta', sans-serif;
+    color: var(--gray);
+
 }
 /* nav */
 .projNav{

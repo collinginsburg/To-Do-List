@@ -1,4 +1,4 @@
-
+import addtaskSVG from '../assets/svgs/Group3.svg';
 
 
 
@@ -71,8 +71,30 @@ let taskList = document.createElement('ul');
 taskList.classList.add('taskList');
 
 // 4. add task button
-let addTask = document.createElement('div');
-addTask.classList.add('addTask');
+let addTaskContainer = document.createElement('div');
+addTaskContainer.classList.add('addTaskContainer');
+
+    let addTask = document.createElement('div');
+    addTask.classList.add('addTask');
+        let addTaskButton = document.createElement('button');
+        addTaskButton.classList.add('addTask__btn');
+
+            const SVG = new Image();
+            SVG.src = addtaskSVG;
+            addTaskButton.appendChild(SVG);
+        
+
+            // let addTaskButtonSVG = document.createElement('img');
+            // addTaskButtonSVG.src = './assets/svgs/Group3.svg';
+            // addTaskButton.appendChild(addTaskButtonSVG);
+
+        let addTaskText = document.createElement('p');
+        addTaskText.classList.add('addTask__txt');
+        addTaskText.textContent = 'add task';
+    addTask.appendChild(addTaskButton);
+    addTask.appendChild(addTaskText);
+
+addTaskContainer.appendChild(addTask);
 
 
 
@@ -85,6 +107,6 @@ main.classList.add('taskListContainer');
 main.appendChild(taskListContainerOptions); // 1
 main.appendChild(taskListColTitles); // 2
 main.appendChild(taskList); // 3
-main.appendChild(addTask); // 4
+main.appendChild(addTaskContainer); // 4
 // export
 export default main;
